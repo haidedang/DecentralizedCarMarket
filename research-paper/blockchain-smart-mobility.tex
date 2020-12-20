@@ -1,0 +1,78 @@
+%
+% This LaTeX source file provides a template for a typical research paper.
+%
+
+%
+% Use the standard article template.
+%
+\documentclass{article}
+\input{tex/solidity-highlighting.tex}
+
+% The geometry package allows for easy page formatting.
+\usepackage{geometry}
+\geometry{letterpaper}
+
+% Load up special logo commands.
+\usepackage{doc}
+
+% Package for formatting URLs.
+\usepackage{url}
+
+% Packages and definitions for graphics files.
+\usepackage{graphicx}
+\usepackage{epstopdf}
+
+\usepackage{subcaption}
+\usepackage{booktabs}
+
+\DeclareGraphicsRule{.tif}{png}{.png}{`convert #1 `dirname #1`/`basename #1 .tif`.png}
+
+%
+% Set the title, author, and date.
+%
+\title{Blockchain in Smart Mobility \\ \large Decentralized Car Marketplace}
+\author{Lucas Rebscher, Robin Papke, Hai Duc Dang, Chinh Tran}
+\date{}
+
+%
+% The document proper.
+%
+\begin{document}
+
+% Add the title section.
+\maketitle
+
+% Add an abstract.
+\input{tex/abstract}
+
+% Add various lists on new pages.
+\pagebreak
+\tableofcontents
+
+\pagebreak
+\listoffigures
+
+\pagebreak
+\listoftables
+
+% Start the paper on a new page.
+\pagebreak
+
+\input{tex/introduction}
+\clearpage
+\input{tex/foundations}
+\clearpage
+\input{tex/concept}
+\clearpage
+\input{tex/implementation}
+\clearpage
+\input{tex/evaluation}
+\clearpage
+\input{tex/conclusion}
+\clearpage
+
+% Generate the bibliography.
+\bibliography{bibliography}
+\bibliographystyle{unsrt}
+
+\end{document}

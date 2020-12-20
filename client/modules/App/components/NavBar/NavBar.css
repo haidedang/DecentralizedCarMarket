@@ -1,0 +1,26 @@
+.container {
+  background-color: white;
+  flex-grow: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.navLink {
+  text-decoration: none;
+  color: #333;
+  padding: 30px;
+}
+
+a.navLink:hover {
+  cursor: pointer;
+  color: #736b5c;
+}
+
+.title {
+  margin-right: auto;
+  text-decoration: none;
+  color: #333;
+  font-size: 24px;
+  padding: 20px;
+}

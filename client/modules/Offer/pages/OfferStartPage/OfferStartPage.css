@@ -1,0 +1,54 @@
+.root {
+  width: 100%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: #f3f3f3;
+  text-align: left;
+}
+
+.distance {
+  height: 40px;
+  display: block;
+}
+
+.box {
+  margin: auto
+}
+
+.container {
+  width: 70%;
+  margin: auto;
+  padding-top: 10px;
+  padding-bottom: 30px;
+  background-color: #fff;
+  text-align: left;
+}
+
+.innerBox {
+  width: 70%;
+  padding-top: 10px;
+  margin: auto;
+  background-color: #fff;
+}
+
+.detail {
+  padding-top: 30px;
+  padding-bottom: 30px;
+}
+
+.footer {
+  padding-top: 25px;
+  width: 70%;
+  margin: auto;
+}
+
+.seperate {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid rgb(206, 206, 206);
+  margin: 1em 0;
+  padding: 0;
+  padding-top: 20px;
+}

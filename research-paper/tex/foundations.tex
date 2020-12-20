@@ -1,0 +1,109 @@
+\section{Foundations} \label{sec:foundations}
+
+\subsection{Blockchain}
+The term blockchain still has no satisfying definition yet, but the ISO/TC 307 describes a blockchain as the following:
+[Blockchain is] \textit{a shared, immutable ledger that can record transactions across different industries, [...]  It is a digital platform, that records and verifies transactions in a transparent and secure way, removing the need for middlemen and increasing trust through its highly transparent nature}.
+\\
+\\
+In practice, this means that a blockchain is a distributed computer architecture where each computer is treated as a node of this network. Each node has knowledge of all transactions inside the network. Transactions are encrypted and bundled in a so called 'block'. Only one block at a time can be added to the network, because it has to be verified that it follows the previous blocks first. Nowadays, blockchain technologies have the following traits:
+\begin{itemize}
+\item \textbf{Distributed}: Each node is considered equal and has the full history of all transactions.
+Because this ledger isn't stored in a central location, blockchains avoid situations like 'single point of failure', which can be inherent in client-server based system.
+\item \textbf{Time-Stamped}: Each block contains a timestamp, along with a cryptographic hash of the previous block and transaction data. Consequently, with each new block it becomes harder to change past entries, because they are built on the information of past blocks.
+\item \textbf{Consensus}: Once the block is recorded, a consensus algorithm ensures that the data in any given block cannot retroactively be altered without changing the data of all subsequent blocks. To achieve this, it would require at least 51 percent control of the whole network. This guarantees that a value can only be spent once~\cite{Blockchain}.
+\end{itemize}
+
+
+Due to these traits, blockchain technology makes a suitable fit for storing  medical records, identity management and financial transaction processing~\cite{Application}.
+
+There are two types of blockchains: private and public. The best known public blockchain is the Bitcoin Network, in which everyone is allowed to read and write data to the ledger.
+An advantage of such a blockchain type is, that no access control is needed and therefore applications can be built on top of it without the approval of others.
+A private blockchain needs a participant to have the appropriate permission, in order to join the network. In contrast to the public blockchains, they do not rely on anonymous nodes to validate transactions, as the validators are vetted by the network owner~\cite{Private}.
+
+\subsection{Consensus Algorithm}
+
+Consensus is a group decision-making process in which group members develop and agree to support a decision in the best interest of the whole. The goal is to ensure the existence of a single source of truth. An overview of well-known consensus algorithms is outlined in Table~\ref{table:consensus}. In the following, we will describe the two most popular consensus algorithms, namely Proof-of-Work and Proof-of-Stake more in detail.
+
+\subsubsection{Proof-of-Work}
+
+Proof-of-Work (PoW) is based on the assumption that work must be put into something to give it value, and in Bitcoin's case this work is doing computations with mining which serves the following two purposes:
+\begin{enumerate}
+  \item verify the legitimacy of a transaction, or avoiding the so-called double-spending
+  \item create new digital currencies by rewarding miners for performing the previous task~\cite{consensus}.
+\end{enumerate}
+
+The following steps happen after issuing a transaction:
+\begin{itemize}
+  \item Transactions are bundled together into what is called a block
+  \item Miners verify that transactions within each block are legitimate
+  \item Miners solve a mathematical puzzle known as Proof-of-Work problem
+  \item A reward is given to the first miner who solves each block's problem
+  \item Verified transactions are stored in the public blockchain
+\end{itemize}
+All the network miners compete to be the first to find a solution for the mathematical problem that concerns the candidate block, a problem that cannot be solved in other ways than through brute force so that essentially requires a huge number of attempts.
+When a miner finally finds the right solution, he/she announces it to the whole network at the same time, receiving cryptographic tokens (the reward) provided by the protocol.
+From a technical point of view, the mining process is an operation of inverse hashing, i.e. it determines a number (nonce), so the cryptographic hash algorithm of block data results in less than a given threshold~\cite{PoW}.
+
+\subsubsection{Proof-of-Stake}
+
+In contrast to PoW, Proof-of-Stake (PoS) does not use computing power in order to validate transactions, but rather the ownership of the participant's token.
+The more tokens an user owns, the higher is the probability to be selected as the new forger.
+PoS requires the forger to put his tokens on 'stake' during the validating process, so validating a fraudulent transaction would mean to loose his stake.
+Forgers therefore are incentivized to behave according the rules. However, PoS has to deal with the 'Nothing-at-Stake' attack. This problem comes up, if a validator bets on all different proposed versions, thus being certain to win~\cite{PoS}.
+
+\begin{table}[]
+\centering
+\def\arraystretch{1.5}
+\begin{tabular}{@{}p{30mm}p{30mm}p{30mm}p{40mm}p{15mm}@{}}
+\toprule
+Consensus algorithm              & Resource being used                                                     & Benefits                                                          & Drawbacks                                                                                                                 & Examples          \\ \midrule
+Proof-of-Work (PoW)              & Computing power                                                         & Trustless, immutable, highly decentralized                        & High energy consumption, low transaction throughput                                                                       & Bitcoin, Ethereum \\
+Proof-of-Stake (PoS)             & Ownership of fixed amount of tokens                                     & Efficient in energy and throughput, scalable                      & Nothing-at-Stake problem, i.e. voting for different forks at the same time                                                & NXT               \\
+Delegated PoS                    & Ownership of scarce tokens + peer reputation (election for delegates)   & Allegedly more efficient than PoS                                 & Voter apathy in elections can lead to excessive centralization and reduces robustness                                     & BitShares         \\
+Tendermint (Proof-of-Validation) & Security deposit of scarce tokens subject to burn if voting dishonestly & Gives benefits of PoS without almost any of its drawbacks         & Nothing-at-Stake problem still persists over long periods of time                                                         & Eris-DB           \\
+Proof-of-Authority (PoA)         & Selected authorities are randomly selected to validate transactions     & Efficient, does not require any inherent tokens or economic value & The corruption of authorities is a large possibility, relies on authorities being well-selected and controlling eachother &                   \\ \bottomrule
+\end{tabular}
+\caption{Consensus algorithms for usage in blockchains. Adapted from source:
+\cite{consensus} with addition of Proof-of-Authority \label{table:consensus}}
+\end{table}
+
+\clearpage
+
+\subsection{Ethereum}
+
+Ethereum was the first blockchain technology to incorporate smart contracts~\cite{Ethereum}. These contracts are executed automatically once certain criteria are fulfilled.
+Ethereum's initial goal was to ease the creation of decentralized applications. Developers can leverage the Turing-complete programming language to program the arbitrary application logic.
+According to the white paper, the main focus was on five key elements:
+\begin{itemize}
+  \item \textbf{Simplicity}: This characteristic is followed even in some cases for the price of lower storage and time efficiency. No extra complexity is to be brought, only if for fundamental optimization purposes.
+  \item \textbf{Universality}: There are no limiting functionalities with Ethereum. Using the internal Turing-complete scripting language which it provides, any use case can be implemented.
+  \item \textbf{Modularity}: The Ethereum protocol can be broken up into components which function independently from each other.
+  \item \textbf{Agility}: Characteristics of the protocol may be prone to change, however only in cases when it proves to have a high potential for scalability or security.
+  \item \textbf{Non-discrimination and Non-censorship}: The implementation of any use case is permitted, a fee is paid for each application running on top of Ethereum.
+\end{itemize}
+Each transaction contains 'standard' fields that are stored on the ledger, those are: information on the recipient, the signature of the sender, a data field that may be used when deemed so and the number of Ether to be transferred with the transaction.
+Apart from these fields, there are two more values: STARTGAS and GASPRICE. These describe the value that are used for computations. Each computation of a transaction costs a certain amount of gas and there is also starting value. This is needed so that no Denial-of-Service (DoS) or other malicious operations leveraging infinite loops can be carried out in the network.
+
+The Ethereum Virtual Machine (EVM) is the environment where the smart contracts are processed during runtime. Therefore, the contract code is compiled into a binary format and then stored in the Ethereum blockchain. The EVM is Turing-complete, meaning that any mathematical computation can be processed by it~\cite{Ethereum}.
+
+\subsubsection{Smart Contracts}
+The term smart contract has first been described in an scientific essay of Nick Szabo in 1998, in which he explains how contractual relations between different parties can be secured through computer networks~\cite{nickszabo1994smartcontract}. According to his view, smart contracts are computer controlled transaction protocols, which execute the terms of the contract often resulting to a complete replacement of the middleman. The goal is to enforce the compliance of contract terms between the parties (Szabo, 1998). Practically speaking, they execute the terms and conditions that were recorded in contracts by running program code. This way, it is ensured that points of the contract are fulfilled and are not corrupted in any way \cite{SmartContracts}.
+
+A decentralized application (DApp) is an application based on web technologies like JavaScript, HTML5 and CSS. In contrast to traditional web applications, decentralized applications will not work on a centralized web server, but can be configured by any user after installing the required runtime environment. In the context of smart contracts or Ethereum, DApps are a combination of a front-end written in traditional web languages and a smart contract as a backend component.
+
+\subsubsection{ERC-721 Token Standard} \label{sec:ERC721}
+
+A token generally represents an asset. In the context of cryptocurrencies, tokens ensure that the properties of these assets can be digitized.
+The ERC-721 ("Ethereum Request for Comment") Non-Fungible Token Standard specifies functions and events, which a smart contract has to implement in order to ensure interoperability between different applications in the Ethereum ecosystem~\cite{ERC721}. It differs from other token standards such as ERC-20, especially by its lack of fungibility.
+
+The term fungible means interchangeable or justifiable. That means, that 1 Ether is indistinguishable from another Ether regarding its value. Taking a banknote for example, though each banknote has its own ID, the value stays the same. In ERC-721, however, each token is unique and has unique properties and its own value.
+
+Overall, ERC-721 has the following characteristics~\cite{ERC721}:
+
+\begin{itemize}
+    \item Non-fungible (not exchangeable).
+    \item Not divisible (can not be decomposed into smaller units, like the ERC20 standard).
+    \item Additional fields in the token standard allow an individual design.
+    \item The contracts implemented in the token standard can concurrently cover an arbitrarily large number of ERC-721 tokens. This means that a single contract may contain one or more tokens.
+    \item The owner history can be traced back to the origin.
+  \end{itemize}

@@ -1,0 +1,18 @@
+[
+  {
+    "accidents": "0",
+    "carId": 0,
+    "title": "Flintstone Cars",
+    "description": "We have upgraded to actual engines! Come and check it out!"
+  },
+  {
+    "carId": 1,
+    "title": "Desla",
+    "description": "Investors aren't too happy about us selling our cars on this platform but here we go!"
+  },
+  {
+    "carId": 2,
+    "title": "WV",
+    "description": "Be part of the environmental apocalypse with us!"
+  }
+]

@@ -1,0 +1,7 @@
+.card {
+  box-shadow: none !important;
+}
+
+.cover {
+  min-height: 200px;
+}

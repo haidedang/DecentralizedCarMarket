@@ -1,0 +1,26 @@
+.offer {
+  padding: 20px;
+}
+
+.card {
+  display: flex;
+  box-shadow: none !important;
+}
+
+.cover {
+  min-width: 300px;
+  height: 100%;
+}
+
+.button {
+  box-shadow: none !important;
+}
+
+.link {
+  text-decoration: none;
+  color: #333;
+}
+
+.attrContainer {
+  padding-top: 15;
+}

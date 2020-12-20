@@ -1,0 +1,43 @@
+.content {
+  width: auto;
+  height: 100%;
+  margin: auto;
+}
+
+.searchBoxContainer {
+  flex-grow: 1;
+  background-size: cover;
+  border-bottom: 1px solid #ccc;
+  width: auto;
+  height: 100%;
+  max-width: 1280px;
+  min-height: 480px;
+  margin: auto;
+  padding: 35px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.promoContainer h2 {
+  text-align: center;
+  padding-top: 50px;
+  font-weight: normal;
+}
+
+.gridContainer {
+  align-items: center;
+  direction: row;
+  justify-content: flex-start;
+}
+
+.promoContainer {
+  background-color: #f3f3f3;
+}
+
+.citationContainer {
+  background-color: #f3f3f3;
+  width: auto;
+  height: 100%;
+  padding-bottom: 35px;
+}

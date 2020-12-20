@@ -1,0 +1,28 @@
+# Intellij
+/.idea
+
+# Visual Studio Code
+.vscode/
+
+# Node.js dependencies
+**/node_modules
+
+# Built files
+/build
+ethereum/build
+
+# Prod build
+dist/
+
+# Public resources
+public/*
+
+# Debug logs
+npm-debug.log
+
+# Other Stuff
+.DS_Store
+npm-debug.log
+dump.rdb
+coverage/
+.nyc_output/

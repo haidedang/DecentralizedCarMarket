@@ -1,0 +1,115 @@
+.container {
+  background-color: #ffffff;
+  flex-grow: 1;
+  background-size: cover;
+  width: auto;
+  height: 100%;
+  max-width: 1280px;
+  min-height: 480px;
+  margin: auto;
+  margin-top: 15px;
+}
+
+.muiGridContainer {
+  margin: 0px !important;
+}
+
+.button {
+  min-width: 0px !important;
+}
+
+.upperDetails {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: space-around;
+  border-bottom: #f3f3f3 2px solid;
+  padding-bottom: 15px;
+}
+
+.lowerDetails {
+  display: flex;
+  flex-wrap: wrap;
+  align-content: flex-end;
+}
+
+.background {
+  min-height: 500px;
+  background-size: cover !important;
+}
+
+.details {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.tabs {
+  border-top: #f3f3f3 15px solid;
+}
+
+.gridItem {
+  padding: 10px;
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+}
+
+.gridItem svg {
+  font-size: 30px;
+  margin-right: 3px;
+}
+
+.lowerGridItem {
+  padding: 10px;
+  display: flex;
+  align-items: flex-end;
+}
+
+.iconGridItem {
+  padding: 10px;
+  padding-right: 15px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+a {
+  text-decoration: none;
+  color: #000000;
+  display: flex;
+  align-items: center;
+}
+
+.imageContainer {
+  padding: 10px;
+  padding-top: 0px;
+}
+
+.color {
+  color: #000000 !important;
+}
+
+.gradeIcon {
+  color: gold;
+  font-size: 20px !important;
+}
+
+.seller {
+  margin-right: 8px;
+}
+
+.reviews {
+  margin-left: 5px;
+  font-weight: lighter;
+  font-size: 14px;
+}
+
+.subdescription {
+  font-weight: lighter;
+  margin-left: 6px;
+  font-size: 12px;
+}
+
+.chip {
+  margin-right: 8px;
+  margin-top: 5px;
+}

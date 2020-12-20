@@ -1,0 +1,31 @@
+.root {
+  max-width: 480px;
+  margin: auto;
+  padding: 15px;
+  background-color: #fff;
+  border: 1px solid #999999;
+  border-radius: 4px;
+  text-align: left;
+}
+
+.header {
+  flex-grow: 1;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.footer {
+  flex-grow: 1;
+  padding: 10px;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.link {
+  text-decoration: none;
+  color: #007cca;
+}
+
+.link:hover {
+  color: #04619c;
+}

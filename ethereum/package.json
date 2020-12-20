@@ -1,0 +1,16 @@
+{
+  "name": "car-marketplace",
+  "version": "1.0.0",
+  "description":
+    "The goal of this project is to create a decentralized marketplace where users can buy and sell their cars. Each car has its digital identity on the blockchain which cannot be modified. This should create trust between seller and buyer even if they do not know each other.",
+  "main": "",
+  "scripts": {
+    "start:eth": "rimraf build && truffle develop"
+  },
+  "devDependencies": {
+    "openzeppelin-solidity": "1.9.0"
+  },
+  "dependencies": {
+    "rimraf": "^2.6.2"
+  }
+}

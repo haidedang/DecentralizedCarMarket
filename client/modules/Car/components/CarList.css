@@ -1,0 +1,46 @@
+.bidder {
+  color: green !important;
+}
+
+.button {
+  box-shadow: none !important;
+  color: #736b5c;
+  min-width: 50px !important;
+}
+
+.root {
+  flex-grow: 1;
+}
+
+.innerGridContainer {
+  align-items: center;
+  margin: 0px !important;
+  width: 100% !important;
+  padding: 12px;
+  justify-content: flex-end;
+}
+
+.muiGridContainer {
+  justify-content: flex-start;
+  background-color: #f3f3f3;
+  padding-top: 24px;
+}
+
+.gridItem {
+  background-clip: content-box;
+  background-color: #ffffff;
+}
+
+.gridItem h2 {
+  text-align: center;
+  font-weight: normal;
+  padding: 10px;
+}
+
+.innerContent {
+  padding: 10px;
+}
+
+.textAlign {
+  text-align: end;
+}
